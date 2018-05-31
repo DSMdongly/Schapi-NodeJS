@@ -17,8 +17,8 @@ npm install schapi
 식단표를 불러와 출력하는 예제입니다.
 
 ```
-// Type의 기본값은 (HIGH - 고등학교: 4) 입니다
-let api = new SchoolAPI(SchoolAPI.Region.DAEJEON, "G100000170", SchoolAPI.Type.HIGH)
+// Constructor(region, code, type = School.Type.HIGH)
+let api = new SchoolAPI(SchoolAPI.Region.DAEJEON, "G100000170")
 
 // Sync
 console.log(api.getMonthlyMenus(2018, 5)[23].lunch)
